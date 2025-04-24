@@ -53,7 +53,7 @@ const Login = () => {
                 className="flex flex-col gap-4 m-auto items-start p-8 py-12 w-80 sm:w-[352px] rounded-lg shadow-xl border border-gray-200 bg-white"
             >
                 <p className="text-2xl font-medium m-auto">
-                    <span className="text-indigo-500">User</span> {state === "signup" ? "signup" : "login"}
+                 {state === "signup" ? "signup" : "login"}
                 </p>
                 {state === "signup" && (
                     <div className="w-full">
@@ -62,7 +62,7 @@ const Login = () => {
                             onChange={(e) => setName(e.target.value)}
                             value={name}
                             placeholder="type here"
-                            className="border border-gray-200 rounded w-full p-2 mt-1 outline-indigo-500"
+                            className="border border-gray-200 rounded w-full p-2 mt-1 outline-green-500"
                             type="text"
                             required
                         />
@@ -74,7 +74,7 @@ const Login = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         value={email}
                         placeholder="type here"
-                        className="border border-gray-200 rounded w-full p-2 mt-1 outline-indigo-500"
+                        className="border border-gray-200 rounded w-full p-2 mt-1 outline-green-500"
                         type="email"
                         required
                     />
@@ -85,7 +85,7 @@ const Login = () => {
                         onChange={(e) => setPassword(e.target.value)}
                         value={password}
                         placeholder="type here"
-                        className="border border-gray-200 rounded w-full p-2 mt-1 outline-indigo-500"
+                        className="border border-gray-200 rounded w-full p-2 mt-1 outline-green-500"
                         type="password"
                         required
                     />
@@ -95,7 +95,7 @@ const Login = () => {
                         Already have account?{" "}
                         <span
                             onClick={() => setState("login")}
-                            className="text-indigo-500 cursor-pointer"
+                            className="text-green-500 cursor-pointer"
                         >
                             click here
                         </span>
@@ -105,14 +105,14 @@ const Login = () => {
                         Create an account?{" "}
                         <span
                             onClick={() => setState("signup")}
-                            className="text-indigo-500 cursor-pointer"
+                            className="text-green-500 cursor-pointer"
                         >
                             click here
                         </span>
                     </p>
                 )}
                 <button
-                    className={`bg-indigo-500 hover:bg-indigo-600 transition-all text-white w-full py-2 rounded-md cursor-pointer ${loading ? "opacity-50 cursor-not-allowed" : ""
+                    className={`bg-green-500 hover:bg-green-600 transition-all text-white w-full py-2 rounded-md cursor-pointer ${loading ? "opacity-50 cursor-not-allowed" : ""
                         }`}
                     disabled={loading}
                 >
