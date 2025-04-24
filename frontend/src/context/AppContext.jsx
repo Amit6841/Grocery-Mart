@@ -4,7 +4,7 @@ import toast from 'react-hot-toast';
 import axios from 'axios';
 
 axios.defaults.withCredentials = 'include';
-axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL || "http://localhost:4000"
+axios.defaults.baseURL = import.meta.env.VITE_BACKEND_URL || "https://grocery-mart-alpha.vercel.app"
 
 export const AppContext = createContext();
 
