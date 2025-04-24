@@ -76,7 +76,7 @@ const ProductDetails = () => {
                         <button onClick={() => addTocart(product._id)} className="w-full py-3.5 cursor-pointer font-medium bg-gray-100 text-gray-800/80 hover:bg-gray-200 transition" >
                             Add to Cart
                         </button>
-                        <button onClick={() => { addTocart(product._id); navigate("/cart") }} className="w-full py-3.5 cursor-pointer font-medium bg-indigo-500 text-white hover:bg-indigo-600 transition" >
+                        <button onClick={() => { addTocart(product._id); navigate("/cart") }} className="w-full py-3.5 cursor-pointer font-medium bg-green-500 text-white hover:bg-indigo-600 transition" >
                             Buy now
                         </button>
                     </div>
@@ -92,7 +92,7 @@ const ProductDetails = () => {
 
                     </div>
                 </div>
-                <button onClick={() => {navigate('/products');scrollTo(0,0) }} className="w-25 py-3.5 mt-15 cursor-pointer font-medium text-indigo-500 rounded-xl border border-indigo-500 hover:bg-indigo-600 transition" >
+                <button onClick={() => {navigate('/products');scrollTo(0,0) }} className="w-25 py-3.5 mt-15 cursor-pointer font-medium text-green-500 rounded-xl border border-green-500 hover:bg-green-600 transition" >
                     see more
                 </button>
             </div>
