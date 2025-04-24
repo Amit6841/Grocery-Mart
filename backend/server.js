@@ -18,7 +18,7 @@ const Port = process.env.PORT || 4000;
 connectDB()
 connectCloudinary()
 
-const allowedOrigin = ["http://localhost:5173"]
+const allowedOrigin = ["https://grocery-mart-npj4.vercel.app"]
 app.use(express.json())
 app.use(
     bodyParser.urlencoded({
