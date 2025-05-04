@@ -11,11 +11,7 @@ export const AppContext = createContext();
 export const AppContextProvider = ({ children }) => {
     const currency = import.meta.env.VITE_CURRENCY;
     const navigate = useNavigate();
-
-    const [user, setuser] = useState(()=>{
-        const storedUser = localStorage.getItem("user");
-        return storedUser ? JSON.parse(storedUser) : null;
-      });
+    const [user, setuser] = useState(null);
     const [isSeller, setisSeller] = useState(false);
     const [showUserLogin, setshowUserLogin] = useState(false);
     const [products, setProducts] = useState([]);
@@ -131,16 +127,6 @@ export const AppContextProvider = ({ children }) => {
             updatedCart()
         }
     }, [cartItems])
-
-    useEffect(() => {
-        if (user) {
-          localStorage.setItem("user", JSON.stringify(user));
-        }
-        else {
-          localStorage.removeItem("user");
-        }
-      }, [user]);  
-
 
     const value = {
         navigate,
