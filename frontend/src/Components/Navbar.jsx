@@ -16,6 +16,8 @@ const Navbar = () => {
             if (data.success) {
                 toast.success(data.message);
                 setuser(null);
+                localStorage.removeItem("user")
+                localStorage.removeItem("token")
                 navigate('/');
             } else {
                 toast.error(data.message);
@@ -43,7 +45,7 @@ const Navbar = () => {
             <div className="hidden sm:flex items-center  gap-8 text-white">
                 <div className="hidden lg:flex items-center text-sm gap-2 bg-white border-[2px] border-gray-300 px-3 rounded-full">
                     <input onChange={(e) => setSearchQuery(e.target.value)} className="py-1.5 w-full bg-transparent outline-none placeholder-gray-500" type="text" placeholder="Search products" />
-                    <IoSearchSharp className='text-2xl text-black'/>
+                    <IoSearchSharp className='text-2xl text-black' />
                 </div>
 
                 <NavLink to="/" className="hover:text-yellow-300">Home</NavLink>
@@ -60,7 +62,7 @@ const Navbar = () => {
                     Login
                 </button>) : (
                     <div className='relative group'>
-                       <MdOutlineAccountCircle className='text-3xl hover:text-gray-200'/>
+                        <MdOutlineAccountCircle className='text-3xl hover:text-gray-200' />
                         <ul className='hidden group-hover:block absolute top-10 right-0 bg-white text-black shadow border border-gray-200 py-2.5 w-30 rounded-md text-sm z-40'>
                             <li onClick={() => navigate("my-orders")} className='p-1.5 pl-3 hover:bg-primary/10 cursor-pointer'>My orders</li>
                             <li onClick={logout} className='p-1.5 pl-3 hover:bg-primary/10 cursor-pointer'>logout</li>
